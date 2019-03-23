@@ -2,11 +2,7 @@
 
 A python wrapper for speech-to-text application using Pocketsphinx. It publishes strings of detected commands, has a custom master-phrase for commands and can handle an emergency stop command.
 
-The following repositories were used in our wrapper, but are not required for installation:
-
-- [ros_voice_control](https://github.com/gorinars/ros_voice_control)
-
-- [helperScripts](https://github.com/malceore/helperScripts)
+The repositories [ros_voice_control](https://github.com/gorinars/ros_voice_control) and [helperScripts](https://github.com/malceore/helperScripts) were used in our wrapper, but are not required for installation:
 
 ## Installation
 
