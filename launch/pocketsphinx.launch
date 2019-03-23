@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="pocketsphinx_recognizer" pkg="pocketsphinx" type="recognizer.py" output="screen">
+    <param name="command_list" value="$(find pocketsphinx)/lang_models/voice_cmd.txt" />
+    <param name="dictionary" value="$(find pocketsphinx)/lang_models/3140.dic" />
+    <param name="lm" value="$(find pocketsphinx)/lang_models/3140.lm" />
+    <param name="stopword" value = "STOP" />
+    <param name="hotword" value="ROBOT"/>
+  </node>
+</launch>

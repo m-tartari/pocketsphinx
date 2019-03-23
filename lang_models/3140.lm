@@ -1,0 +1,72 @@
+Language model created by QuickLM on Sat Mar 23 13:04:27 EDT 2019
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 9 sentences and 13 words
+
+\data\
+ngram 1=13
+ngram 2=20
+ngram 3=16
+
+\1-grams:
+-0.8783 </s> -0.3010
+-0.8783 <s> -0.2394
+-1.5315 BACK -0.2394
+-1.8325 FOLLOW -0.2946
+-1.5315 FORWARD -0.2394
+-1.5315 GO -0.2747
+-1.8325 LEFT -0.2394
+-1.8325 ME -0.2394
+-1.5315 MOVE -0.2747
+-1.8325 RIGHT -0.2394
+-1.8325 ROBOT -0.2394
+-1.8325 STOP -0.2394
+-1.5315 TURN -0.2881
+
+\2-grams:
+-1.2553 <s> FOLLOW 0.0000
+-0.9542 <s> GO 0.0000
+-0.9542 <s> MOVE 0.0000
+-1.2553 <s> ROBOT 0.0000
+-1.2553 <s> STOP 0.0000
+-0.9542 <s> TURN 0.0000
+-0.3010 BACK </s> -0.3010
+-0.3010 FOLLOW ME 0.0000
+-0.3010 FORWARD </s> -0.3010
+-0.6021 GO BACK 0.0000
+-0.6021 GO FORWARD 0.0000
+-0.3010 LEFT </s> -0.3010
+-0.3010 ME </s> -0.3010
+-0.6021 MOVE BACK 0.0000
+-0.6021 MOVE FORWARD 0.0000
+-0.3010 RIGHT </s> -0.3010
+-0.3010 ROBOT </s> -0.3010
+-0.3010 STOP </s> -0.3010
+-0.6021 TURN LEFT 0.0000
+-0.6021 TURN RIGHT 0.0000
+
+\3-grams:
+-0.3010 <s> FOLLOW ME
+-0.6021 <s> GO BACK
+-0.6021 <s> GO FORWARD
+-0.6021 <s> MOVE BACK
+-0.6021 <s> MOVE FORWARD
+-0.3010 <s> ROBOT </s>
+-0.3010 <s> STOP </s>
+-0.6021 <s> TURN LEFT
+-0.6021 <s> TURN RIGHT
+-0.3010 FOLLOW ME </s>
+-0.3010 GO BACK </s>
+-0.3010 GO FORWARD </s>
+-0.3010 MOVE BACK </s>
+-0.3010 MOVE FORWARD </s>
+-0.3010 TURN LEFT </s>
+-0.3010 TURN RIGHT </s>
+
+\end\

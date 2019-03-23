@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+      <name>pocketsphinx</name>
+      <version>0.1.0</version>
+      <description>
+      This package is python wraper to use pocketsphinx in ros.
+      </description>
+      <author>Michele Tartari</author>
+      <maintainer email="michele.tartari@live.com">Michele Tartari</maintainer>
+      <license>BSD</license>
+      <url type="website">http://ros.org/wiki/pocketsphinx</url>
+
+      <buildtool_depend>catkin</buildtool_depend>
+      <exec_depend>rospy</exec_depend> >
+      <exec_depend>std_msgs</exec_depend>
+      <exec_depend>std_srvs</exec_depend>
+      <exec_depend>geometry_msgs</exec_depend> >
+
+</package>

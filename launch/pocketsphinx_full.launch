@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+  <node name="pocketsphinx_recognizer" pkg="pocketsphinx" type="recognizer.py" output="screen">
+    <param name="command_list" value="$(find pocketsphinx)/lang_models/voice_cmd.txt" />
+    <param name="dictionary" value="$(find pocketsphinx)/lang_models/3140.dic" />
+    <param name="lm" value="$(find pocketsphinx)/lang_models/3140.lm" />
+    <param name="stopword" value = "STOP" />
+    <param name="hotword" value="ROBOT"/>
+    <param name="format" value="pyaudio.paInt16" />
+    <param name="channel" value="1"/>
+    <param name="rate" value="16000"/>
+    <!-- CHUNKS of bytes to read each time from mic -->
+    <param name="chunk" value="1024" />
+    <!-- These 2 are available but give some issues
+    <param name="model_dir" value="/usr/local/lib/python2.7/dist-packages/pocketsphinx/model/en-us/cmusphinx-en-us-8khz-5.2" /> 
+    <param name="data_dir" value="/usr/local/lib/python2.7/dist-packages/pocketsphinx/data/"/>
+    -->
+  </node>
+
+</launch>
