@@ -6,5 +6,6 @@
     <param name="lm" value="$(find pocketsphinx)/lang_models/3140.lm" />
     <param name="stopword" value = "STOP" />
     <param name="hotword" value="ROBOT"/>
+    <param name="model_dir" value="$(find pocketsphinx)/lang_models/en-us" />
   </node>
 </launch>

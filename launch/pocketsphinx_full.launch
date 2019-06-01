@@ -11,10 +11,9 @@
     <param name="rate" value="16000"/>
     <!-- CHUNKS of bytes to read each time from mic -->
     <param name="chunk" value="1024" />
-    <!-- These 2 are available but give some issues
-    <param name="model_dir" value="/usr/local/lib/python2.7/dist-packages/pocketsphinx/model/en-us/cmusphinx-en-us-8khz-5.2" /> 
-    <param name="data_dir" value="/usr/local/lib/python2.7/dist-packages/pocketsphinx/data/"/>
-    -->
+    <!-- language model directory -->
+    <param name="model_dir" value="$(find pocketsphinx)/lang_models/en-us" />
+    
   </node>
 
 </launch>
