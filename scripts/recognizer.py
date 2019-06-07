@@ -141,7 +141,7 @@ class recognizer(object):
                             # if contains stopword publish it immediately
                             if (word.find(self.STOPWORD)!=-1):
                                 rospy.loginfo( "found stopword")
-                                self.pub_.publish(self.STOPWORD)
+                                self.publish(self.STOPWORD)
 
                             # else look for hotword
                             elif word.startswith(self.HOTWORD):
