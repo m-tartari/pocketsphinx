@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import rospy
-from std_msgs.msg import String
+from std_msgs.msg import String, Header
 
 import pyaudio
 from os import environ, path
@@ -14,7 +14,7 @@ class recognizer(object):
             # Start node and publisher
             rospy.init_node("recognizer")
             rospy.on_shutdown(self.shutdown)
-            self.pub_ = rospy.Publisher('~output', String, queue_size=1)
+            self.pub_ = rospy.Publisher('~output', Header, queue_size=1)
 
             # Load Pocketsphinx parameters
             if rospy.has_param('~stopword'):
@@ -152,12 +152,19 @@ class recognizer(object):
                                     #check if command is in the list
                                     if word in self.command_list: 
                                               rospy.loginfo( "Found it")
-                                              self.pub_.publish(word) #TODO: checkif  it works
+                                              self.publish(word) #TODO: checkif  it works
                             rospy.loginfo("Read to receive comnnad")
                             self.decoder.start_utt()
                 else:
                     break
             self.decoder.end_utt()
+
+
+      def publish(self,string):
+        voice_cmd=Header()
+        voice_cmd.frame_id=string
+        voice_cmd.stamp=rospy.Time.now()
+        self.pub_.publish(voice_cmd)
 
       def shutdown(self):
             #
